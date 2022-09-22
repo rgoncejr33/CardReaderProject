@@ -1,0 +1,94 @@
+/* variables created in the :root ruleset 
+are called Global variables: use variables wherever we want in our stylesheet */
+
+:root {
+    --activeInputBorder: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    --inputErrors: hsl(0, 100%, 66%);
+    --white: hsl(0, 0%, 100%);
+    --lightGrayishViolet: hsl(270, 3%, 87%);
+    --darkGrayishViolet: hsl(279, 6%, 55%);
+    --veryDarkViolet: hsl(278, 68%, 11%);
+}
+
+body {
+    font-family:'Space Grotesk', sans-serif;
+    font-size:18px;
+    font-weight: 500px;
+    margin: 0px;
+    padding: 0px;
+}
+
+label {
+    margin: 2px;
+}
+
+input :active {
+    border: 5px solid var(--activeInputBorder);
+}
+
+section {
+    display: flex;
+}
+
+#parent {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#card-front {
+    position: relative;
+    top: 100px;
+    left: -275px;
+    height: 200px;
+}
+
+#card-back {
+    position: absolute;
+    top: 325px;
+    left: -200px;
+    height: 200px;
+}
+
+#form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px green solid;
+    text-align: center;
+    width: 100%;
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    font-family: "Space Grotesk";
+    font-weight: 500px;
+    font-size: 18px;
+}
+
+#card-exp-cvc {
+    display: flex;
+    flex-direction: row;
+}
+
+#card-exp, #card-cvc {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    color: var(--white);
+    background-color: var(--veryDarkViolet);
+    width: 70%;
+    padding: 10px;
+}
+
+#emonth, #edate {
+    width: 25%;
+}
