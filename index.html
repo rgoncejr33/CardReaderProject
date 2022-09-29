@@ -3,76 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="/ProjectCardReader.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
-  
+  <link rel="stylesheet" href="ProjectCardReader.css">
   <title>Frontend Mentor | Interactive card details form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
   <section>
-      <img id="desktop-background" src="/images/bg-main-desktop.png" alt="Purple gradient background on left side of screen" />
-      <div id="parent">
-        <img id="card-front" src="/images/bg-card-front.png" alt="Front of debit/credit card image" />
-        <img id="card-back" src="/images/bg-card-back.png" alt="Back of debit/credit card image" />
-      </div>
+    <img id="desktop-background" src="images/bg-main-desktop.png" alt="Purple gradient background on left side of screen" />
+    <div id="parent">
+      <img src="images/card-logo.svg" alt="card logo" id="cardLogo" />
+      <p id="cardNum">0000 0000 0000 0000</p>
+      <p id="cardName">JANE APPLESEED</p>
+      <p id="cardExp">00/00</p>
+      <img id="card-front" src="images/bg-card-front.png" alt="Front of debit/credit card image" />
+      <img id="card-back" src="images/bg-card-back.png" alt="Back of debit/credit card image" />
       <section id="form-container">
-      <form>
-        <label for="cname">CARDHOLDER NAME:</label>
-        <input type="text" id="cname" name="cname" placeholder="e.g. Jane Appleseed">
-
-        <label for="cnumber">CARD NUMBER:</label>
-        <input type="text" id="cnumber" name="cnumber" placeholder="e.g. 1234 5678 9123 0000">
-        <div id="card-exp-cvc">
-          <div id="card-exp">
-            <label for="edate">EXP. DATE (MM/YY):</label>
-            <div>
-              <input type="text" id="emonth" name="emonth" placeholder="MM">
-              <input type="text" id="edate" name="edate" placeholder="YY">
+        <form>
+          <label for="cname">CARDHOLDER NAME</label>
+          <input type="text" id="cname" name="cname" placeholder="e.g. Jane Appleseed">
+          <label for="cnumber">CARD NUMBER</label>
+          <input type="text" id="cnumber" name="cnumber" placeholder="e.g. 1234 5678 9123 0000" size="16">
+          <div id="card-exp-cvc">
+            <div id="card-exp">
+              <label for="edate">EXP. DATE (MM/YY)</label>
+              <div>
+                <input type="text" id="emonth" name="emonth" placeholder="MM" size="2">
+                <input type="text" id="edate" name="edate" placeholder="YY" size="2">
+              </div>
+            </div>
+            <div id="card-cvc">
+              <label for="cvc">CVC</label>
+              <input type="text" id="cvc" name="cvc" placeholder="e.g. 123" size="3">
             </div>
           </div>
-          
-            
-          <div id="card-cvc">
-            <label for="cvc">CVC:</label>
-            <input type="text" id="cvc" name="cvc" placeholder="e.g. 123">
-          </div>
-        </div>
-        <button type="button">Confirm</button>
-      </form>
-    </section>
+          <button type="button">Confirm</button>
+        </form>
+      </section>
+    </div>
+      
   </section>
   0000 0000 0000 0000
   Jane Appleseed
   00/00
 
   000
-
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-
-  <!-- Completed state start -->
 
   Thank you!
   We've added your card details
