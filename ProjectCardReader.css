@@ -1,5 +1,6 @@
 /* variables created in the :root ruleset 
 are called Global variables: use variables wherever we want in our stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
 
 :root {
     --activeInputBorder: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
@@ -13,14 +14,17 @@ are called Global variables: use variables wherever we want in our stylesheet */
 body {
     font-family:'Space Grotesk', sans-serif;
     font-size:18px;
-    font-weight: 500px;
+    font-weight: 500;
     margin: 0px;
     padding: 0px;
 }
 
 label {
-    margin: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
     margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 10px;
 }
 
 input {
@@ -50,37 +54,65 @@ section {
 
 #card-front {
     position: relative;
-    top: 175px;
+    top: 170px;
     left: -300px;
     height: 225px;
+    color: white;
 }
 
 #cardLogo {
     position: absolute;
     top: 200px;
-    left: -275px;
+    left: -265px;
     z-index: 1;
 }
 
 #cardNum {
     position: absolute;
-    top: 325px;
-    left: -275px;
+    top: 270px;
+    left: -265px;
     z-index: 1;
+    color: white;
+    font-size: 28px;
+    font-weight: lighter;
+    letter-spacing: 2px;
 }
 
-#cardName {
+#cardInfo {
     position: absolute;
-    top: 275px;
-    left: -275px;
     z-index: 1;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 335px;
+    left: -265px;
+    width: 335px;
+    color: white;
+    font-size: 12px;
+    font-weight: lighter;
+    letter-spacing: 2px;
 }
+
+/* #cardName {
+    position: absolute;
+    top: 395px;
+    left: -265px;
+    z-index: 1;
+} */
 
 #card-back {
     position: absolute;
-    top: 450px;
+    top: 435px;
     left: -225px;
     height: 225px;
+}
+
+#cardCVC {
+    position: absolute;
+    top: 518px;
+    left: 100px;
+    color: white;
+    font-size: 16px;
 }
 
 #form-container {
@@ -122,7 +154,7 @@ form {
 button {
     color: var(--white);
     background-color: var(--veryDarkViolet);
-    width: 100%;
+    width: 40%;
     padding: 15px;
     margin-top: 30px;
     border-radius: 5px;
@@ -137,3 +169,7 @@ button {
     width: 90%;
 }
 
+.attribution {
+    position: fixed;
+    bottom: 0;
+}
