@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
+
+/* create Color variables */
+$activeInputBorder: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+$inputErrors: hsl(0, 100%, 66%);
+$white: hsl(0, 0%, 100%);
+$lightGrayishViolet: hsl(270, 3%, 87%);
+$darkGrayishViolet: hsl(279, 6%, 55%);
+$veryDarkViolet: hsl(278, 68%, 11%);
+
+/* Create some Base Variables */
+$font-family: 'Space Grotesk', sans-serif;
+$font-size: 18px;
+$fweight-lighter: lighter;
+$letter-spacing: 2px;
+$position: relative;
+$z-index: 1;
+$card-left: -265px;
+
+
+
+/* Create some base Mixins */
+@mixin positioning($position, $top, $left) {
+    position: $position;
+    top: $top;
+    left: $left;
+}
+
+@mixin flexProperties($display, $flex-direction, $align-items, $justify-content){
+    @if $align-items != null {
+        display: $display;
+        flex-direction: $flex-direction;
+        align-items: $align-items;
+        justify-content: $justify-content;
+    } @else {
+        display: $display;
+        flex-direction: $flex-direction;
+        justify-content: $justify-content;
+    }
+}

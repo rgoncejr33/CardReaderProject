@@ -1,0 +1,62 @@
+@use 'base';
+
+section {
+    display: flex;
+
+    #parent {
+        @include base.positioning(relative, 0, 0);
+        width: 100%;
+
+        #card-front {
+            @include positioning(relative, 170px, -300px);
+            height: 220px;
+            color: $white;
+        }
+
+        #cardLogo {
+            @include positioning(absolute, 200px, $card-left);
+            z-index: $z-index;
+        }
+
+        #cardNum {
+            @include positioning(absolute, 270px, $card-left);
+            z-index: $z-index;
+            color: $white;
+            font-size: 28px;
+            font-weight: $fweight-lighter;
+            letter-spacing: $letter-spacing;
+        }
+
+        #cardInfo {
+            @include positioning(absolute, 335px, $card-left);
+            @include flexProperties(flex, row, $align-items:null, space-between);
+            width: 335px;
+            color: $white;
+            font-size: 12px;
+            font-weight: $fweight-lighter;
+            letter-spacing: $letter-spacing;
+        }
+
+        #card-back {
+            @include positioning(absolute, 518px, 100px);
+            height: 225px;
+        }
+
+        #cardCVC {
+            @include positioning(absolute, 518px, 100px);
+            color: $white;
+            font-size: 16px;
+        }
+
+        #form-container {
+            @include flexProperties(flex, column, center, right);
+            width: 100%;
+
+            form {
+                @include flexProperties(flex, column, left, left);
+                text-align: left;
+                width: 40%;
+            }
+        }
+    }
+}

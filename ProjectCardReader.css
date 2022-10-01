@@ -45,6 +45,10 @@ section {
     display: flex;
 }
 
+#mobile-background {
+    display: none;
+}
+
 #parent {
     position: relative;
     top: 0;
@@ -93,13 +97,6 @@ section {
     letter-spacing: 2px;
 }
 
-/* #cardName {
-    position: absolute;
-    top: 395px;
-    left: -265px;
-    z-index: 1;
-} */
-
 #card-back {
     position: absolute;
     top: 435px;
@@ -129,7 +126,7 @@ form {
     flex-direction: column;
     align-items: left;
     justify-content: left;
-    text-aiign: left;
+    text-align: left;
     width: 40%;
     font-family: "Space Grotesk";
     font-weight: 500px;
@@ -159,9 +156,10 @@ button {
     margin-top: 30px;
     border-radius: 5px;
     font-size: 25px;
+    border-radius: 10px;
 }
 
-#emonth, #edate {
+#emonth, #eyear {
     width: 30%;
 }
 
@@ -169,7 +167,106 @@ button {
     width: 90%;
 }
 
+span {
+    visibility: hidden;
+    color: var(--inputErrors);
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 5px;
+    letter-spacing: .5px;
+}
+
+aside {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+h2 {
+    letter-spacing: 2px;
+}
+
+aside > p {
+    margin: 0;
+    font-weight: 300;
+}
+
 .attribution {
     position: fixed;
     bottom: 0;
+}
+
+/* MOBILE STYLES */
+@media only screen and (max-width: 375px){
+    section {
+        flex-direction: column;
+        width: 375px;
+    }
+
+    #desktop-background {
+        display: none;
+    }
+
+    #mobile-background {
+        display: flex;
+        height: 230px;
+    }
+
+    #card-back {
+        top: -200px;
+        left: 60px;
+        //width: 300px;
+        height: 150px;
+    }
+    #card-front {
+        z-index: 1;
+        height: 145px;
+        top: -115px;
+        left: 20px;
+    }
+    #parent {
+        align-items: flex-start;
+    }
+    form {
+        width: 80%;
+    }
+
+    #cardLogo {
+        top: -95px;
+        left: 35px;
+        z-index: 2;
+        height: 30px;
+    }
+
+    #cardNum {
+        top: -60px;
+        left: 35px;
+        z-index: 2;
+        font-size: 18px;
+    }
+    
+    #cardInfo {
+        z-index: 2;
+        top: -10px;
+        left: 35px;
+        width: 240px;
+        color: white;
+        font-size: 10px;
+        font-weight: lighter;
+        letter-spacing: 2px;
+    }
+
+    #cardCVC {
+        position: absolute;
+        top: -135px;
+        left: 280px;
+        margin: 0;
+        font-size: 12px;
+    }
+
+    .attribution {
+        font-size: 12px;
+    }
 }

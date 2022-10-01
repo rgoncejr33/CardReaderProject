@@ -13,6 +13,7 @@
 <body>
   <section>
     <img id="desktop-background" src="images/bg-main-desktop.png" alt="Purple gradient background on left side of screen" />
+    <img id="mobile-background" src="images/bg-main-mobile.png" alt="purple gradient background" />
     <div id="parent">
       <img src="images/card-logo.svg" alt="card logo" id="cardLogo" />
       <p id="cardNum">0000 0000 0000 0000</p>
@@ -27,32 +28,43 @@
         <form id="userInfo">
           <label for="cname">CARDHOLDER NAME</label>
           <input type="text" id="cname" name="cname" placeholder="e.g. Jane Appleseed">
+          <span id="errMsgName">Can't be blank</span> <!--err msgs-->
           <label for="cnumber">CARD NUMBER</label>
-          <input type="text" id="cnumber" name="cnumber" placeholder="e.g. 1234 5678 9123 0000" size="16">
+          <input type="text" id="cnumber" name="cnumber" placeholder="e.g. 1234 5678 9123 0000" maxlength="16">
+          <span id="errMsgNum">Wrong format, numbers only</span> <!--err msgs-->
           <div id="card-exp-cvc">
             <div id="card-exp">
               <label for="edate">EXP. DATE (MM/YY)</label>
               <div>
-                <input type="text" id="emonth" name="emonth" placeholder="MM" size="2">
-                <input type="text" id="edate" name="edate" placeholder="YY" size="2">
+                <input type="text" id="emonth" name="emonth" placeholder="MM" maxlength="2" >
+                <input type="text" id="eyear" name="eyear" placeholder="YY" maxlength="2">
               </div>
+              <span id="errMsgExpDate">Can't be blank</span> <!--err msgs-->
             </div>
             <div id="card-cvc">
               <label for="cvc">CVC</label>
-              <input type="text" id="cvc" name="cvc" placeholder="e.g. 123" size="3">
+              <input type="text" id="cvc" name="cvc" placeholder="e.g. 123" maxlength="3">
+              <span id="errMsgCVC">Can't be blank</span> <!--err msgs-->
             </div>
           </div>
         </form>
-        <button onclick="hideForm()" type="submit">Confirm</button>
+        <aside id="thanksState">
+          <img src="images/icon-complete.svg" alt="complete checkmark icon" />
+          <h2>THANK YOU!</h2>
+          <p>We've added your card details</p>
+        </aside>
+        <button type="submit" id="btnGo">Confirm</button>
         <div class="attribution">
           Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
           Coded by <a href="#">Your Name Here</a>.
         </div>
       </section>
     </div>
-      
   </section>
-  <script src="/script.js"></script>
-  
+  <!-- Order that you load these matters -->
+  <script src="js/variables.js" type="module"></script>
+  <script src="js/logic.js" type="module"></script>
+  <script src="js/misc.js" type="module"></script>
+  <script src="script.js"></script> <!-- Remove this after cleanup -->
 </body>
 </html>
